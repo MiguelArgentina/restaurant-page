@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/images/main-picture.jpeg":
-/*!*****************************************!*\
-  !*** ./assets/images/main-picture.jpeg ***!
-  \*****************************************/
+/***/ "./assets/images/spices.jpg":
+/*!**********************************!*\
+  !*** ./assets/images/spices.jpg ***!
+  \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"4b1d61069342e9fe79cf.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./assets/images/main-picture.jpeg?");
+eval("module.exports = __webpack_require__.p + \"2601dd647c0fb58241b0.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./assets/images/spices.jpg?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("module.exports = __webpack_require__.p + \"4b1d61069342e9fe79cf.jpeg\";\n\
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".hello {\\n    color: red;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"\\n.hello {\\n    color: red;\\n}\\n\\n#content {\\n  height: 100vh;\\n}\\n.bg-image-container {\\nheight: 100%;\\n}\\n\\n.height-60vh {\\n  height: 60vh;\\n}\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addElement)\n/* harmony export */ });\n\n\nfunction addElement (element, elementTextNode, parentId)     {\n    // create a new div element\n    const newDiv = document.createElement(element);\n\n    // and give it some content\n    const newContent = document.createTextNode(elementTextNode);\n\n    // add the text node to the newly created div\n    newDiv.appendChild(newContent);\n\n    // add the newly created element and its content into the DOM\n    const currentDiv = document.getElementById(parentId);\n    document.body.insertBefore(newDiv, currentDiv);\n}\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/addElements.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addElementAsChild\": () => (/* binding */ addElementAsChild),\n/* harmony export */   \"addElementAsSibling\": () => (/* binding */ addElementAsSibling),\n/* harmony export */   \"addUl\": () => (/* binding */ addUl)\n/* harmony export */ });\nfunction addElementAsChild(element, id, elementTextNode, parent, cssClasses) {\n  // Create a new element\n  const newElement = document.createElement(element);\n  newElement.id = id\n  //Add the classes to the element\n  cssClasses.forEach((cssClasses, i) => {\n    newElement.classList.add(cssClasses)\n  });\n  // Add content to the element\n  const newContent = document.createTextNode(elementTextNode);\n  newElement.appendChild(newContent);\n\n  // add the newly created element and its content into the DOM\n  const currentElement = document.querySelector(parent);\n  currentElement.appendChild(newElement);\n  return newElement\n}\n\n\nfunction addElementAsSibling(element, id, elementTextNode, sibling, cssClasses, after = false) {\n  // Create a new element\n  const newElement = document.createElement(element);\n  newElement.id = id\n  //Add the classes to the element\n  cssClasses.forEach((cssClasses, i) => {\n    newElement.classList.add(cssClasses)\n  });\n  // Add content to the element\n  const newContent = document.createTextNode(elementTextNode);\n  newElement.appendChild(newContent);\n\n  const siblingElement = document.querySelector(sibling);\n  // add the newly created element and its content into the DOM\n  if (!after) {\n    (siblingElement.parentNode).insertBefore(newElement, siblingElement);\n  } else {\n    (siblingElement.parentNode).insertBefore(newElement, siblingElement.nextSibling);\n  }\n\n  return newElement\n}\n\n\nfunction addUl(id, parent, listItems, ulCssClasses, liCssClasses) {\n  // Create a new element\n  const newUl = document.createElement('ul');\n  newUl.id = id\n  //Add the classes to the element\n  ulCssClasses.forEach((cssClass, i) => {\n    newUl.classList.add(cssClass)\n  });\n  // Add list items to the ul\n  listItems.forEach((listItemText, i) => {\n    const listViewItem=document.createElement('li');\n    listViewItem.appendChild(createAnchor(listItemText, i==0 ? ['nav-link'] : ['nav-link', 'link-dark']));\n    //Add classes to the li\n    liCssClasses.forEach((cssClass, i) => {\n      listViewItem.classList.add(cssClass)\n    });\n    newUl.appendChild(listViewItem);\n});\n\n\n// add the newly created element and its content into the DOM\nconst currentElement = document.querySelector(parent);\ncurrentElement.appendChild(newUl);\n\n  return newUl\n}\n\nfunction createAnchor(anchorText, cssClasses) {\n  const newAnchor = document.createElement('a');\n  //Add the classes to the element\n  cssClasses.forEach((cssClass, i) => {\n    newAnchor.classList.add(cssClass)\n  });\n  // Add content to the element\n  const newContent = document.createTextNode(anchorText);\n  newAnchor.appendChild(newContent);\n  newAnchor.setAttribute(\"href\", \"#\");\n  return newAnchor\n}\n\n\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/addElements.js?");
 
 /***/ }),
 
@@ -76,7 +76,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_images_main_picture_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images/main-picture.jpeg */ \"./assets/images/main-picture.jpeg\");\n/* harmony import */ var _addElements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./addElements.js */ \"./src/addElements.js\");\n// const addElements = import('add-elements');\n// console.log('Bienvenido a mi página')\n// addElements.addElement('div','Test text', 'content')\n\n\n\n\nconsole.log('Bienvenido a mi página');\n\nconst element = document.querySelector('#content');\n(0,_addElements_js__WEBPACK_IMPORTED_MODULE_2__.default)('div','Test text', 'content');\n\n// Add the image to our existing div.\nconst myImage = new Image();\nmyImage.src = _assets_images_main_picture_jpeg__WEBPACK_IMPORTED_MODULE_1__;\n\nelement.appendChild(myImage);\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _onLoadActions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./onLoadActions */ \"./src/onLoadActions.js\");\n/* harmony import */ var _ourSpace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ourSpace */ \"./src/ourSpace.js\");\n// const addElements = import('add-elements');\n// console.log('Bienvenido a mi página')\n// addElements.addElement('div','Test text', 'content')\n\n\n\n\n\n\n(0,_onLoadActions__WEBPACK_IMPORTED_MODULE_1__.default)()\n;(0,_ourSpace__WEBPACK_IMPORTED_MODULE_2__.default)()\nconsole.log('Bienvenido a mi página');\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/onLoadActions.js":
+/*!******************************!*\
+  !*** ./src/onLoadActions.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ onLoadActions)\n/* harmony export */ });\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_images_spices_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images/spices.jpg */ \"./assets/images/spices.jpg\");\n/* harmony import */ var _addElements_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./addElements.js */ \"./src/addElements.js\");\n\n\n\n\n//import addElementAsSibling from './addElements.js';\nfunction onLoadActions() {\nconsole.log('onLoadActions');\n\ndocument.querySelector('body').style.backgroundImage = `url('../assets/images/bg-main.jpg')`;\ndocument.querySelector('body').style.backgroundSize = 'cover';\ndocument.querySelector('body').style.backgroundRepeat = 'repeat-y';\n\n\n\ndocument.body.addEventListener( 'click', function ( event ) {\n  if( event.target.innerText == 'Our home' ) {\n    console.log(event.target.innerText)\n  }\n  else if( event.target.innerText == 'Menu' ) {\n    console.log(event.target.innerText)\n  }\n  else if( event.target.innerText == 'Reservations' ) {\nconsole.log(event.target.innerText)\n  }\n  else if( event.target.innerText == 'Contact Us' ) {\nconsole.log(event.target.innerText)\n  };\n} );\n\nconst mainNavBar = (0,_addElements_js__WEBPACK_IMPORTED_MODULE_2__.addUl)('main-nav-bar', '#content', ['Our home', 'Menu', 'Reservations', 'Contact Us'], ['nav', 'nav-tabs'], ['nav-item'])\n\n\nconst newElement = (0,_addElements_js__WEBPACK_IMPORTED_MODULE_2__.addElementAsChild)('div', 'main-bg-container','parent', '#content', ['container-fluid', 'bg-image-container']);\nconst newElement2 = (0,_addElements_js__WEBPACK_IMPORTED_MODULE_2__.addElementAsChild)('div', 'first-child','first-child', '#main-bg-container', ['container-fluid']);\nconst newElement3 = (0,_addElements_js__WEBPACK_IMPORTED_MODULE_2__.addElementAsSibling)('div', 'first-sibling','first-sibling', '#first-child', ['container-fluid']);\nconst newElement4 = (0,_addElements_js__WEBPACK_IMPORTED_MODULE_2__.addElementAsSibling)('div', 'second-sibling','second-sibling', '#first-child', ['container-fluid'],true);\n\n\n\n\n\n// Add the image to our existing div.\n// const myImage = new Image();\n// myImage.src = bgImage;\n// myImage.style.width = \"100%\";\n//newElement.appendChild(myImage);\n\n\n\n\n\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/onLoadActions.js?");
+
+/***/ }),
+
+/***/ "./src/ourSpace.js":
+/*!*************************!*\
+  !*** ./src/ourSpace.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ourSpaceTabContent)\n/* harmony export */ });\n/* harmony import */ var _addElements_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addElements.js */ \"./src/addElements.js\");\n\n\n\nfunction ourSpaceTabContent() {\n  console.log('onLoadActions');\nconst ourSpaceTabContent = (0,_addElements_js__WEBPACK_IMPORTED_MODULE_0__.addElementAsSibling)('div', 'ourSpaceTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'],true);\ndocument.querySelector('#ourSpaceTabContent').style.backgroundImage = `url('../assets/images/locro.jpeg')`;\ndocument.querySelector('#ourSpaceTabContent').style.backgroundSize = 'cover';\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/ourSpace.js?");
 
 /***/ })
 
@@ -131,18 +151,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -161,22 +169,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 		__webpack_require__.p = "/dist";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
