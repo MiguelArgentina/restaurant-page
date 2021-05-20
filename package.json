@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MiguelArgentina/restaurant-page.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Miguel Gomez",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MiguelArgentina/restaurant-page/issues"
   },
@@ -22,7 +23,8 @@
     "css-loader": "^5.2.4",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.1",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "lodash": "^4.17.21"
