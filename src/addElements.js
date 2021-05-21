@@ -70,6 +70,7 @@ currentElement.appendChild(newUl);
 
 function createAnchor(anchorText, cssClasses) {
   const newAnchor = document.createElement('a');
+  newAnchor.id = anchorText.toLowerCase().replace(' ', '-');
   //Add the classes to the element
   cssClasses.forEach((cssClass, i) => {
     newAnchor.classList.add(cssClass)
@@ -81,5 +82,18 @@ function createAnchor(anchorText, cssClasses) {
   return newAnchor
 }
 
+function navBarClassesUpdater(activeAnchor) {
+const idsArr = ['our-home', 'menu', 'contact-us', 'reservations']
+idsArr.forEach(element => {
+  const tempElement = document.querySelector('#' + element);
+  if (element == activeAnchor.toLowerCase().replace(' ', '-')) {
+  tempElement.classList.remove('link-dark');
+  }
+  else {
+    tempElement.classList.add('link-dark');
+  }  
+});
+}
 
-export {addElementAsChild, addElementAsSibling, addUl}
+
+export {addElementAsChild, addElementAsSibling, addUl, navBarClassesUpdater}

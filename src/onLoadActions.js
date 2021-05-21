@@ -12,21 +12,6 @@ document.querySelector('body').style.backgroundRepeat = 'repeat-y';
 
 
 
-document.body.addEventListener( 'click', function ( event ) {
-  if( event.target.innerText == 'Our home' ) {
-    console.log(event.target.innerText)
-  }
-  else if( event.target.innerText == 'Menu' ) {
-    console.log(event.target.innerText)
-  }
-  else if( event.target.innerText == 'Reservations' ) {
-console.log(event.target.innerText)
-  }
-  else if( event.target.innerText == 'Contact Us' ) {
-console.log(event.target.innerText)
-  };
-} );
-
 const mainNavBar = addUl('main-nav-bar', '#content', ['Our home', 'Menu', 'Reservations', 'Contact Us'], ['nav', 'nav-tabs'], ['nav-item'])
 
 

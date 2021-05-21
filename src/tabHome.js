@@ -1,4 +1,4 @@
-import {addElementAsChild, addElementAsSibling, addUl} from './addElements.js';
+import {addElementAsChild, addElementAsSibling, addUl, navBarClassesUpdater} from './addElements.js';
 
 
 export default function ourSpaceTabContent() {
@@ -6,4 +6,5 @@ export default function ourSpaceTabContent() {
 const ourSpaceTabContent = addElementAsSibling('div', 'ourSpaceTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'],true);
 document.querySelector('#ourSpaceTabContent').style.backgroundImage = `url('../assets/images/locro.jpeg')`;
 document.querySelector('#ourSpaceTabContent').style.backgroundSize = 'cover';
+navBarClassesUpdater('Our home')
 }
