@@ -4,9 +4,6 @@ import {
 
 export default function reservationsTabContent() {
   addElementAsSibling('div', 'reservationsTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'], true);
-  document.querySelector('#reservationsTabContent').style.backgroundImage = 'url(\'../assets/images/humitas.jpeg\')';
-  document.querySelector('#reservationsTabContent').style.backgroundSize = 'cover';
-  document.querySelector('#reservationsTabContent').style.backgroundRepeat = 'no-repeat';
   navBarClassesUpdater('Reservations');
 
   const f = document.createElement('form');

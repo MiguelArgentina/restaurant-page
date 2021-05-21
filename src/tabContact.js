@@ -4,9 +4,6 @@ import {
 
 export default function contactTabContent() {
   addElementAsSibling('div', 'contactTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'], true);
-  document.querySelector('#contactTabContent').style.backgroundImage = 'url(\'../assets/images/spices.jpg\')';
-  document.querySelector('#contactTabContent').style.backgroundSize = 'cover';
-  document.querySelector('#contactTabContent').style.backgroundRepeat = 'no-repeat';
   navBarClassesUpdater('Contact Us');
 
   const f = document.createElement('form');

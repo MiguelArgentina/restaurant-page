@@ -1,5 +1,8 @@
 .body {
   height: 100vh;
+  background-image: url('../assets/images/bg-main.jpg');
+  background-size: cover;
+  background-repeat: repeat-y;
 }
 
 #content {
@@ -17,4 +20,28 @@
 
 .height-60vh {
   height: 60vh;
+}
+
+#contactTabContent {
+  background-image: url('../assets/images/spices.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#ourSpaceTabContent {
+  background-image: url('../assets/images/locro.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#ourMenuTabContent {
+  background-image: url('../assets/images/empanadas.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#reservationsTabContent {
+  background-image: url('../assets/images/humitas.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

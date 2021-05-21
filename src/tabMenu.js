@@ -4,9 +4,6 @@ import {
 
 export default function ourMenuTabContent() {
   addElementAsSibling('div', 'ourMenuTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'], true);
-  document.querySelector('#ourMenuTabContent').style.backgroundImage = 'url(\'../assets/images/empanadas.jpeg\')';
-  document.querySelector('#ourMenuTabContent').style.backgroundSize = 'cover';
-  document.querySelector('#ourMenuTabContent').style.backgroundRepeat = 'no-repeat';
   navBarClassesUpdater('menu');
 
   const listItems = ['Asado', 'Locro', 'Choripan', 'Empanadas', 'Dulce de leche', 'Milanesa a la Napolitana', 'Pollo al disco'];

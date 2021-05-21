@@ -4,8 +4,6 @@ import {
 
 export default function ourSpaceTabContent() {
   addElementAsSibling('div', 'ourSpaceTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'], true);
-  document.querySelector('#ourSpaceTabContent').style.backgroundImage = 'url(\'../assets/images/locro.jpeg\')';
-  document.querySelector('#ourSpaceTabContent').style.backgroundSize = 'cover';
   navBarClassesUpdater('Our home');
 
   const parentElement = document.querySelector('#ourSpaceTabContent');
