@@ -1,36 +1,32 @@
-// const addElements = import('add-elements');
-// console.log('Bienvenido a mi página')
-// addElements.addElement('div','Test text', 'content')
 
 import './style.css';
 import onLoadActions from './onLoadActions';
 import ourSpaceTabContent from './tabHome'
 import clearContainer from './clearContainer'
 import ourMenuTabContent from './tabMenu'
+import reservationsTabContent from './tabReservations'
+import contactTabContent from './tabContact'
+
 
 document.body.addEventListener( 'click', function ( event ) {
   if( event.target.innerText == 'Our home' ) {
-    console.log(event.target.innerText)
-    clearContainer('#content', ['main-nav-bar'])
+    clearContainer('#content', ['main-nav-bar', 'footer'])
     ourSpaceTabContent()
   }
   else if( event.target.innerText == 'Menu' ) {
-    console.log(event.target.innerText)
-    clearContainer('#content', ['main-nav-bar'])
+    clearContainer('#content', ['main-nav-bar', 'footer'])
     ourMenuTabContent()
   }
   else if( event.target.innerText == 'Reservations' ) {
-console.log(event.target.innerText)
+    clearContainer('#content', ['main-nav-bar', 'footer'])
+    reservationsTabContent()
   }
   else if( event.target.innerText == 'Contact Us' ) {
-console.log(event.target.innerText)
+    clearContainer('#content', ['main-nav-bar', 'footer'])
+    contactTabContent()
   };
 } );
 
 
-console.log('Bienvenido a mi página');
 onLoadActions()
 ourSpaceTabContent()
-
-
-//ourSpaceTabContent()
