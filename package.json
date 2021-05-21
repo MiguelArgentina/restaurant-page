@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/MiguelArgentina/restaurant-page/issues"
   },
-  "homepage": "https://github.com/MiguelArgentina/restaurant-page#readme",
+  "homepage": "https://github.com/MiguelArgentina/restaurant-page/dist/index.html",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^5.2.4",
