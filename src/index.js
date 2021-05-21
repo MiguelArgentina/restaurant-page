@@ -6,7 +6,6 @@ import './style.css';
 import onLoadActions from './onLoadActions';
 import ourSpaceTabContent from './ourSpace'
 
-
+console.log('Bienvenido a mi página');
 onLoadActions()
 ourSpaceTabContent()
-console.log('Bienvenido a mi página');

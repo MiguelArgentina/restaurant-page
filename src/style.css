@@ -1,13 +1,18 @@
-
-.hello {
-    color: red;
+.body {
+  height: 100vh;
 }
 
 #content {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   height: 100vh;
 }
+
 .bg-image-container {
-height: 100%;
+  height: 100%;
 }
 
 .height-60vh {
