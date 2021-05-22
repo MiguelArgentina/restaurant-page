@@ -2,7 +2,7 @@ import {
   addElementAsSibling, navBarClassesUpdater,
 } from './addElements';
 
-export default function contactTabContent() {
+const contactTabContent = () => {
   addElementAsSibling('div', 'contactTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'], true);
   navBarClassesUpdater('Contact Us');
 
@@ -58,4 +58,6 @@ export default function contactTabContent() {
 
   const currentElement = document.querySelector('#contactTabContent');
   currentElement.appendChild(f);
-}
+};
+
+export default contactTabContent;

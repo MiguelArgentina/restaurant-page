@@ -2,7 +2,7 @@ import {
   addElementAsSibling, navBarClassesUpdater,
 } from './addElements';
 
-export default function ourMenuTabContent() {
+const ourMenuTabContent = () => {
   addElementAsSibling('div', 'ourMenuTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'], true);
   navBarClassesUpdater('menu');
 
@@ -32,4 +32,6 @@ export default function ourMenuTabContent() {
   parentElement.appendChild(newUl);
   parentElement.classList.add('d-flex');
   parentElement.classList.add('align-items-start');
-}
+};
+
+export default ourMenuTabContent;

@@ -2,7 +2,7 @@ import {
   addElementAsSibling, navBarClassesUpdater,
 } from './addElements';
 
-export default function ourSpaceTabContent() {
+const ourSpaceTabContent = () => {
   addElementAsSibling('div', 'ourSpaceTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'], true);
   navBarClassesUpdater('Our home');
 
@@ -17,4 +17,6 @@ export default function ourSpaceTabContent() {
   pElement.classList.add('text-start');
 
   parentElement.appendChild(pElement);
-}
+};
+
+export default ourSpaceTabContent;

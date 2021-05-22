@@ -1,4 +1,4 @@
-function addElementAsChild(element, id, elementTextNode, parent, cssClasses) {
+const addElementAsChild = (element, id, elementTextNode, parent, cssClasses) => {
   const newElement = document.createElement(element);
   newElement.id = id;
 
@@ -12,9 +12,9 @@ function addElementAsChild(element, id, elementTextNode, parent, cssClasses) {
   const currentElement = document.querySelector(parent);
   currentElement.appendChild(newElement);
   return newElement;
-}
+};
 
-function addElementAsSibling(element, id, elementTextNode, sibling, cssClasses, after = false) {
+const addElementAsSibling = (element, id, elementTextNode, sibling, cssClasses, after = false) => {
   const newElement = document.createElement(element);
   newElement.id = id;
 
@@ -34,9 +34,9 @@ function addElementAsSibling(element, id, elementTextNode, sibling, cssClasses, 
   }
 
   return newElement;
-}
+};
 
-function createAnchor(anchorText, cssClasses) {
+const createAnchor = (anchorText, cssClasses) => {
   const newAnchor = document.createElement('a');
   newAnchor.id = anchorText.toLowerCase().replace(' ', '-');
 
@@ -48,9 +48,9 @@ function createAnchor(anchorText, cssClasses) {
   newAnchor.appendChild(newContent);
   newAnchor.setAttribute('href', '#');
   return newAnchor;
-}
+};
 
-function addUl(id, parent, listItems, ulCssClasses, liCssClasses) {
+const addUl = (id, parent, listItems, ulCssClasses, liCssClasses) => {
   const newUl = document.createElement('ul');
   newUl.id = id;
 
@@ -72,9 +72,9 @@ function addUl(id, parent, listItems, ulCssClasses, liCssClasses) {
   currentElement.appendChild(newUl);
 
   return newUl;
-}
+};
 
-function navBarClassesUpdater(activeAnchor) {
+const navBarClassesUpdater = (activeAnchor) => {
   const idsArr = ['our-home', 'menu', 'contact-us', 'reservations'];
   idsArr.forEach((element) => {
     const tempElement = document.querySelector(`#${element}`);
@@ -84,7 +84,7 @@ function navBarClassesUpdater(activeAnchor) {
       tempElement.classList.add('link-dark');
     }
   });
-}
+};
 
 export {
   addElementAsChild, addElementAsSibling, addUl, navBarClassesUpdater,

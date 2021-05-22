@@ -2,7 +2,7 @@ import {
   addElementAsSibling, navBarClassesUpdater,
 } from './addElements';
 
-export default function reservationsTabContent() {
+const reservationsTabContent = () => {
   addElementAsSibling('div', 'reservationsTabContent', '', '#main-nav-bar', ['container-fluid', 'height-60vh'], true);
   navBarClassesUpdater('Reservations');
 
@@ -57,4 +57,6 @@ export default function reservationsTabContent() {
 
   const currentElement = document.querySelector('#reservationsTabContent');
   currentElement.appendChild(f);
-}
+};
+
+export default reservationsTabContent;
