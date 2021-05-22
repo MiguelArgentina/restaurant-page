@@ -20,7 +20,7 @@
 
 ## Live Demo
 
-Visit the [Restaurant Page](https://miguelargentina.github.io/restaurant-page/)
+Visit the [Restaurant Page](https://flamboyant-ride-be0a79.netlify.app/)
 
 ## Prerequisites
 - Internet browser compatible with HTML5, CSS3 and Javascript ES6
@@ -36,7 +36,7 @@ Visit the [Restaurant Page](https://miguelargentina.github.io/restaurant-page/)
 
 ### Usage
 
-- On your broser, go to [http://localhost:8080/](http://localhost:8080/) to visit the site
+- On your broser, go to [http://localhost:8080/dist](http://localhost:8080/dist) to visit the site
 
 
 ## Author
