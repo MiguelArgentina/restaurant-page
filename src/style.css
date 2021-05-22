@@ -1,5 +1,4 @@
-.body {
-  height: 100vh;
+body {
   background-image: url('../assets/images/bg-main.jpg');
   background-size: cover;
   background-repeat: repeat-y;
